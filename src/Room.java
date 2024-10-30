@@ -19,8 +19,9 @@ public class Room {
 		Items.put(i.getName(), i);
 	}
 	
-	public Item getItem(Item i) {
-		return i;
+	public Item getItem(String name) {
+		name = Items.getName(Item i);
+		return name;
 	}
 	
 	public void removeItem(Item i) {
