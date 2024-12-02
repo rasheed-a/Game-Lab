@@ -8,7 +8,25 @@ public class Room {
 	private Room south;
 	private Room up;
 	private Room down;
+	private boolean lock;
+	private String name;
 	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public boolean isLock() {
+		return lock;
+	}
+
+	public void setLock(boolean lock) {
+		this.lock = lock;
+	}
+
 	HashMap<String, Item> Items = new HashMap<String,Item>(); // name, description
 	
 	public Room(String d) {
@@ -19,9 +37,8 @@ public class Room {
 		Items.put(i.getName(), i);
 	}
 	
-	public Item getItem(String name) {
-		name = Items.getName(Item i);
-		return name;
+	public Item getItem(String i) {
+		return Items.get(i);
 	}
 	
 	public void removeItem(Item i) {

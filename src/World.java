@@ -4,10 +4,12 @@ public class World {
 		Room kitchen = new Room("You are in the kitchen.");
 		Room diningRoom = new Room("You are in the dining room.");
 		Room basement = new Room("You are in the basement.");
+		Combination Combination = new Combination("Combination", "This must be a code toopen something!?");
+		basement.addItem(Combination);
 		Room attic = new Room("You are in the attic");
+		Safe Safe = new Safe("Safe", "It's an impressive safe!");
+		attic.addItem(Safe);
 		Room livingRoom = new Room("You are in the living room.");
-		
-		
 	
 		entrance.addExit(kitchen,'e');
 		entrance.addExit(diningRoom,'n');
